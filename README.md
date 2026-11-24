@@ -1,6 +1,51 @@
-# بن حنفي — Website
+<div align="center">
+
+<img src="public/logo.svg" width="130" alt="بن حنفي logo" />
+
+# بن حنفي — Cafe Website
 
 **بن أصيل .. بطعم لا يُنسى · Good Coffee · Good Mood**
+
+A premium, fully responsive **Arabic (RTL)** website for a real cafe in Egypt.
+
+### [🌐 Live demo: bon-hanafy.vercel.app](https://bon-hanafy.vercel.app)
+
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white)
+![Motion](https://img.shields.io/badge/Motion-12-FF4D8D?logo=framer&logoColor=white)
+![Responsive](https://img.shields.io/badge/Responsive-mobile%20%7C%20tablet%20%7C%20desktop-d39a5c)
+
+<br />
+
+<a href="https://bon-hanafy.vercel.app"><img src="docs/screenshots/desktop-hero.jpg" alt="Hero section of the بن حنفي website" /></a>
+
+</div>
+
+## ✨ Highlights
+
+- **Cinematic hero:** layered photography, animated steam, a rotating badge and word-by-word reveal of the Arabic headline.
+- **Complete menu:** 42 drinks in 6 categories, each with its own photo and colour accent, plus a sticky category bar that follows your scroll.
+- **Motion design:** scroll-triggered text and image reveals, parallax, marquee ribbons and an animated intro, built with Motion for React.
+- **Brand identity:** the logo was vector-traced from the printed menu cover, with an espresso, caramel and ivory palette.
+- **Mobile-first:** a custom full-screen mobile menu, touch-friendly controls, a floating call button and no horizontal overflow.
+- **Accessible:** semantic landmarks, a skip link, visible keyboard focus, and support for the reduced-motion setting.
+- **Fast & static:** responsive WebP images, self-hosted fonts and no backend. It deploys anywhere.
+
+## 📸 Screenshots
+
+| Menu | Contact |
+| :--: | :--: |
+| <img src="docs/screenshots/desktop-menu.jpg" alt="Menu category: iced coffee" /> | <img src="docs/screenshots/desktop-contact.jpg" alt="Contact section" /> |
+
+<p align="center">
+  <img src="docs/screenshots/mobile-hero.jpg" width="260" alt="Mobile hero" />
+  &nbsp;&nbsp;
+  <img src="docs/screenshots/mobile-menu.jpg" width="260" alt="Mobile menu" />
+</p>
+
+---
+
+## About the project
 
 Official showcase website for **بن حنفي** cafe in مركز بدر – شارع المدارس – أمام فرع فودافون.
 It presents the complete menu (42 drinks in 6 categories, prices in Egyptian pounds) and lets visitors
@@ -61,7 +106,7 @@ Serves the built `dist/` folder locally so you can check it before uploading.
 
 ## Deployment — which folder to upload
 
-**Live site:** https://bon-hanafy.vercel.app (Vercel project `bon-hanafy`).
+**Live site:** https://bon-hanafy.vercel.app, hosted on Vercel (project `bon-hanafy`).
 
 After `npm run build`, upload **the contents of the `dist/` folder**. That folder is the complete website
 (`index.html` + `assets/` + icons). Nothing else is needed on the server.
@@ -74,18 +119,18 @@ sub-folder (`https://example.com/cafe/`).
 > therefore **not recommended** for this cafe while the problem lasts. Whichever host you choose, test the link
 > from an Egyptian connection, both Wi-Fi and mobile data, before sharing it.
 
-### Cloudflare Pages (recommended)
+### Vercel (current host)
 
-Free, and its free plan does not forbid commercial use. Cloudflare also has servers in the region.
-In the Cloudflare dashboard, go to **Workers & Pages**, choose **Create**, then **Pages**, then the
-**direct upload / upload assets** option. Name the project (for example `bon-hanafy`), drag in the `dist` folder
-(or `bon-hanafy-cafe-dist.zip`), and deploy. The site gets a `https://<project>.pages.dev` address. To update it
-later, open the project and create a new deployment with the new folder.
-
-### Vercel
-
-Import the project. Framework preset **Vite**, Build command `npm run build`, Output directory `dist`.
+Import this repository, or connect it to the existing project under **Settings, then Git**, and set:
+Framework preset **Vite**, Build command `npm run build`, Output directory `dist`.
+Every push to `main` then deploys automatically.
 Note: Vercel's free "Hobby" plan is meant for personal, non-commercial use only.
+
+### Cloudflare Pages
+
+In the Cloudflare dashboard, go to **Workers & Pages**, choose **Create**, then **Pages**, then the
+**direct upload / upload assets** option. Name the project, drag in the `dist` folder, and deploy. The site gets
+a `https://<project>.pages.dev` address.
 
 ### Netlify
 
@@ -137,6 +182,7 @@ update the `og:url`, `og:image` and `canonical` lines in `index.html`, then rebu
 
 ```
 ├── index.html                  Page shell, SEO + structured data
+├── docs/screenshots/           Images used in this README (not part of the website)
 ├── public/                     Copied as-is into dist/
 │   ├── favicon.svg / favicon-32.png / apple-touch-icon.png
 │   ├── icon-512.png            Square logo icon (e.g. for social profiles)
@@ -204,7 +250,8 @@ update the `og:url`, `og:image` and `canonical` lines in `index.html`, then rebu
 1. ثبّت Node.js من nodejs.org.
 2. افتح مجلد المشروع في الطرفية (Terminal) ونفّذ: `npm install` ثم `npm run build`.
 3. سيظهر مجلد اسمه **`dist`**. هذا هو الموقع الجاهز.
-4. ارفع **محتويات مجلد `dist`** إلى الاستضافة، أو اسحب المجلد كاملًا إلى https://app.netlify.com/drop.
+4. ارفع **محتويات مجلد `dist`** إلى الاستضافة. الموقع الحالي على Vercel: https://bon-hanafy.vercel.app
+   (لا يُنصح بـ Netlify حاليًا لأن روابط `netlify.app` لا تفتح من مصر بدون VPN).
 
 لتعديل رقم التليفون أو العنوان أو رابط فيسبوك: `src/data/site.js`.
 لتعديل المنيو أو الأسعار: `src/data/menu.js`.
